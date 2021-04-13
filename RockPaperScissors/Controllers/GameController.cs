@@ -14,33 +14,41 @@ namespace RockPaperScissors.Controllers
   {
 
     [HttpPost]
-    public ActionResult<Game> CreateGame(String player1Name)
+    public ActionResult<Game> CreateGame(String playerOneName)
     {
-      Game game = new Game();
-      game.gameID = new Guid();
+      // create a new instance of a game
+      Game game = new Game
+      {
+        GameID = Guid.NewGuid(),
+        Status = "START GAME",
+        player = new Game.Player
+        {
+          Name = playerOneName
+        },
+      };
 
       return game;
     }
 
     [HttpPost("{id}/join")]
-    public ActionResult<Game> JoinGame(String player2Name)
+    public ActionResult<Game> JoinGame()
     {
 
-      return 
+      return null;
     }
 
     [HttpPost("{id}/move")]
     public ActionResult<Game> PlayGame(String player2Name)
     {
 
-      return
+      return null;
     }
 
     [HttpGet("{id}")]
     public ActionResult<Game> GameStatus()
     {
 
-
+      return null;
     }
   }
 }
