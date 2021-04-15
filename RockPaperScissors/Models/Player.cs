@@ -8,7 +8,6 @@ namespace RockPaperScissors.Models
   public class Player
   {
     public String Name { get; set; }
-
     public String Move { get; set; }
   }
 }

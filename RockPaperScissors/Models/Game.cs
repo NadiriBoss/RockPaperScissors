@@ -7,12 +7,9 @@ namespace RockPaperScissors.Models
 {
   public class Game
   {
-
     public Guid GameID { get; set; }
     public String Status { get; set; }
-
     public Player PlayerOne { get; set; }
-
     public Player PlayerTwo { get; set; }
   }
 
