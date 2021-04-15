@@ -10,13 +10,10 @@ namespace RockPaperScissors.Models
 
     public Guid GameID { get; set; }
     public String Status { get; set; }
-    public Player player { get; set; }
 
-    public class Player
-    {
-      public String Name { get; set; }
-    }
+    public Player PlayerOne { get; set; }
 
+    public Player PlayerTwo { get; set; }
   }
 
 }
